@@ -1,0 +1,156 @@
+.map-view {
+  height: 100%;
+  position: relative;
+}
+
+.map-container {
+  height: 100%;
+  position: relative;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.map-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.map-loading p {
+  color: #64748b;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.map-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+.placeholder-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.placeholder-content h3 {
+  color: #64748b;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.placeholder-content p {
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.placeholder-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Custom marker styles */
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.origin-marker {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.destination-marker {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.charging-marker {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  padding: 0;
+}
+
+.station-popup {
+  padding: 0.5rem;
+  min-width: 200px;
+}
+
+.station-popup h4 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.station-popup p {
+  color: #64748b;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.station-popup p:last-child {
+  margin-bottom: 0;
+}
+
+.station-popup strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .map-view {
+    min-height: 400px;
+  }
+  
+  .placeholder-content {
+    padding: 1.5rem;
+  }
+  
+  .placeholder-content h3 {
+    font-size: 1.25rem;
+  }
+}
