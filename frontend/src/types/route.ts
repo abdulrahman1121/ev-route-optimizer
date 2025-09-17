@@ -61,3 +61,5 @@ export interface EVPreset {
   startSoC: number;
   reserveSoC: number;
 }
+
+

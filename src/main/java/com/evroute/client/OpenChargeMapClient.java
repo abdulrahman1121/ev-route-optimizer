@@ -97,3 +97,4 @@ public class OpenChargeMapClient {
         public boolean IsOperational;
     }
 }
+

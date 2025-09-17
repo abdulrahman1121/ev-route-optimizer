@@ -1,5 +1,5 @@
 import React from 'react';
-import { RoutePlan, PlannedStop } from '../types/route';
+import { RoutePlan } from '../types/route';
 import './PlanSummary.css';
 
 interface PlanSummaryProps {
@@ -39,7 +39,7 @@ export const PlanSummary: React.FC<PlanSummaryProps> = ({ routePlan }) => {
         </div>
         <div className="stat-item">
           <span className="stat-label">Total Time:</span>
-          <span className="stat-value">{routePlan.getFormattedTotalTime()}</span>
+          <span className="stat-value">{formatTime(routePlan.totalDriveMinutes + routePlan.totalChargeMinutes)}</span>
         </div>
         <div className="stat-item">
           <span className="stat-label">Energy Used:</span>
@@ -109,3 +109,5 @@ export const PlanSummary: React.FC<PlanSummaryProps> = ({ routePlan }) => {
     </div>
   );
 };
+
+

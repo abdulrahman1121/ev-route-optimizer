@@ -73,3 +73,4 @@ public class DirectionsService {
         public int getTotalMinutes() { return totalMinutes; }
     }
 }
+

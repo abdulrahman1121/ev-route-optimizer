@@ -1,6 +1,7 @@
 .map-view {
   height: 100%;
   position: relative;
+  min-height: 500px;
 }
 
 .map-container {
@@ -154,3 +155,6 @@
     font-size: 1.25rem;
   }
 }
+
+
+
