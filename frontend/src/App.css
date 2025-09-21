@@ -55,9 +55,10 @@ body {
 
 .right-panel {
   flex: 1;
-  background: #f1f5f9;
+  background: white;
   height: calc(100vh - 120px);
   min-height: 500px;
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {

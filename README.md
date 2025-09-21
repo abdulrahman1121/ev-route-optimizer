@@ -28,4 +28,73 @@ A Tesla-inspired electric vehicle route planning application that optimizes char
 - **Responsive Layout**: Mobile-first design approach
 - **Type Safety**: Full TypeScript implementation
 
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Java 17 or higher
+- Node.js 16 or higher
+- npm or yarn
+- Maven 3.6 or higher
+
+### API Keys Required
+You'll need to obtain API keys from:
+- **OpenRouteService**: Sign up at [openrouteservice.org](https://openrouteservice.org/) for geocoding and routing
+- **OpenChargeMap**: Sign up at [openchargemap.org](https://openchargemap.org/) for charging station data
+
+### Backend Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/abdulrahman1121/ev-route-optimizer.git
+   cd ev-route-optimizer
+   ```
+
+2. Create environment file:
+   ```bash
+   cp env.example .env
+   ```
+
+3. Edit `.env` file and add your API keys:
+   ```env
+   ORS_API_KEY=your_openrouteservice_api_key_here
+   OCM_API_KEY=your_openchargemap_api_key_here
+   ```
+
+4. Start the backend:
+   ```bash
+   mvn spring-boot:run
+   ```
+   The backend will start on `http://localhost:8081`
+
+### Frontend Setup
+1. Navigate to frontend directory:
+   ```bash
+   cd frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   The frontend will start on `http://localhost:5173`
+
+### Running the Application
+1. Make sure both backend and frontend are running
+2. Open your browser and go to `http://localhost:5173`
+3. Enter your origin, destination, and EV details to plan your route
+4. View the optimized route with charging stops on the interactive map
+
+### Production Build
+To build the frontend for production:
+```bash
+cd frontend
+npm run build
+```
+
+The built files will be in the `frontend/dist` directory.
+
 

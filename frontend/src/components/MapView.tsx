@@ -33,6 +33,13 @@ export const MapView: React.FC<MapViewProps> = ({ routePlan, isLoading }) => {
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap contributors'
       }).addTo(map);
+
+      // Force map to resize after a short delay to ensure proper sizing
+      setTimeout(() => {
+        if (mapInstanceRef.current) {
+          mapInstanceRef.current.invalidateSize();
+        }
+      }, 100);
     }
 
     return () => {
